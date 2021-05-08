@@ -66,10 +66,20 @@ window.onload = ()=>{
     document.getElementById("alfabet").innerHTML = trescDiva;
 };
 
+String.prototype.ustawZnak = function(miejsce, znak){
+    if(miejsce > this.length - 1){
+        return this.toString();
+    }
+    else {
+        return this.substr(0,miejsce) + znak + this.substr(miejsce+1);
+    }
+}
+
 function sprawdz(nr){
     for(var i = 0; i < haslo.length; i++){
         if(haslo.charAt(i) == litery[nr]){
-            alert(i);
+           hasloZakodowane = hasloZakodowane.ustawZnak(i,litery[nr]);
         }
     }
+    wypiszHaslo();
 }
