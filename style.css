@@ -3,3 +3,33 @@ body{
     color: lightgray;
     font-size: 28px;
 }
+
+#pojemnik{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plansza{
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+}
+
+#szubienica{
+float: left;
+width: 450px;
+text-align: center;
+}
+
+#alfabet{
+    float: left;
+    width: 450px;
+    text-align: center
+}
+
+#clearBoth{
+    clear: both;
+}
