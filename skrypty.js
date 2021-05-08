@@ -4,6 +4,8 @@ haslo = haslo.toUpperCase();
 
 var hasloZakodowane = "";
 
+var iloscBlendneOdpowiedzi = 0;
+
 var litery = new Array(35);
 litery[0] = "A";
 litery[1] = "Ą";
@@ -76,10 +78,33 @@ String.prototype.ustawZnak = function(miejsce, znak){
 }
 
 function sprawdz(nr){
+
+    var trafiona = false;
+
     for(var i = 0; i < haslo.length; i++){
         if(haslo.charAt(i) == litery[nr]){
            hasloZakodowane = hasloZakodowane.ustawZnak(i,litery[nr]);
+           trafiona = true;
         }
     }
-    wypiszHaslo();
+
+    if(trafiona == true){
+        document.getElementById("lit" + nr).style.backgroundColor = "#003300";
+        document.getElementById("lit" + nr).style.color = "#00C000";
+        document.getElementById("lit" + nr).style.border = "3px solid #00C000";
+        document.getElementById("lit" + nr).style.cursor = "default";
+
+        wypiszHaslo();
+    }
+    else{
+        document.getElementById("lit" + nr).style.backgroundColor = "#330000";
+        document.getElementById("lit" + nr).style.color = "#C00000";
+        document.getElementById("lit" + nr).style.border = "3px solid #C00000";
+        document.getElementById("lit" + nr).style.cursor = "default";
+        document.getElementById("lit" + nr).setAttribute("onclick",";");
+
+        iloscBlendneOdpowiedzi++;
+        document.getElementById("szubieniaca").innerHTML = '<img src="img/s'+iloscBlendneOdpowiedzi+'.jpg">';
+    }
+    
 }
