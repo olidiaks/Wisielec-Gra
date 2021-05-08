@@ -1,19 +1,8 @@
 var haslo = "Bez pracy nie ma kołaczy";
 
+haslo = haslo.toUpperCase();
+
 var hasloZakodowane = "";
-
-for(var i = 0; i< haslo.length; i++){
-    if(haslo.charAt(i) == " "){
-        hasloZakodowane += " ";
-    }
-    else{
-        hasloZakodowane += "-";
-    }
-}
-
-function wypiszHaslo(){
-    document.getElementById("plansza").innerHTML = hasloZakodowane;
-}
 
 var litery = new Array(35);
 litery[0] = "A";
@@ -52,20 +41,35 @@ litery[32] = "Z";
 litery[33] = "Ż";
 litery[34] = "Ź";
 
-
-function wypisanieLiterek(){
-
-    var trescDiva ="";
-
-    for(var i = 0; i <= 34; i++){
-        trescDiva += '<div class="litera">'+litery[i]+'</div>';
-        if((i+1) % 7 == 0) trescDiva = trescDiva + '<div style="clear: both;"></div>';
+for(var i = 0; i< haslo.length; i++){
+    if(haslo.charAt(i) == " "){
+        hasloZakodowane += " ";
     }
+    else{
+        hasloZakodowane += "-";
+    }
+}
 
-    document.getElementById("alfabet").innerHTML = trescDiva;
+function wypiszHaslo(){
+    document.getElementById("plansza").innerHTML = hasloZakodowane;
 }
 
 window.onload = ()=>{
     wypiszHaslo();
-    wypisanieLiterek();
+    var trescDiva ="";
+
+    for(var i = 0; i <= 34; i++){
+        trescDiva += '<div class="litera" id="'+"lit" + i+'" onclick="sprawdz('+i+')">'+litery[i]+'</div>';
+        if((i+1) % 7 == 0) trescDiva = trescDiva + '<div style="clear: both;"></div>';
+    }
+
+    document.getElementById("alfabet").innerHTML = trescDiva;
 };
+
+function sprawdz(nr){
+    for(var i = 0; i < haslo.length; i++){
+        if(haslo.charAt(i) == litery[nr]){
+            alert(i);
+        }
+    }
+}
