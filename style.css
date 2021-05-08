@@ -16,18 +16,21 @@ body{
     margin-bottom: 50px;
     text-align: center;
     font-size: 48px;
+    min-height: 60px;
 }
 
 #szubienica{
 float: left;
 width: 450px;
 text-align: center;
+min-height: 280px;
 }
 
 #alfabet{
     float: left;
     width: 450px;
-    text-align: center
+    text-align: center;
+    min-height: 60px;
 }
 
 #clearBoth{
