@@ -1,4 +1,4 @@
-var haslo = "Bez pracy nie ma kołaczy";
+var haslo = "lol";
 
 haslo = haslo.toUpperCase();
 
@@ -106,5 +106,9 @@ function sprawdz(nr){
         iloscBlendneOdpowiedzi++;
         document.getElementById("szubieniaca").innerHTML = '<img src="img/s'+iloscBlendneOdpowiedzi+'.jpg">';
     }
-    
+
+    if(hasloZakodowane == haslo){
+        document.getElementById("alfabet").innerHTML = "Tak jest! Podano prawidłowe hasło: "+ haslo +
+        '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+    }
 }
