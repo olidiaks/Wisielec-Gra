@@ -111,4 +111,9 @@ function sprawdz(nr){
         document.getElementById("alfabet").innerHTML = "Tak jest! Podano prawidłowe hasło: "+ haslo +
         '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
     }
+
+    if(iloscBlendneOdpowiedzi>=9){
+        document.getElementById("alfabet").innerHTML = "Przegrana! Prawidłowe hasło: "+ haslo +
+        '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+    }
 }
