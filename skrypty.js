@@ -6,6 +6,9 @@ var hasloZakodowane = "";
 
 var iloscBlendneOdpowiedzi = 0;
 
+var yes = new Audio("yes.wav");
+var no = new Audio("no.wav");
+
 var litery = new Array(35);
 litery[0] = "A";
 litery[1] = "Ą";
@@ -89,6 +92,7 @@ function sprawdz(nr){
     }
 
     if(trafiona == true){
+        yes.play();
         document.getElementById("lit" + nr).style.backgroundColor = "#003300";
         document.getElementById("lit" + nr).style.color = "#00C000";
         document.getElementById("lit" + nr).style.border = "3px solid #00C000";
@@ -97,6 +101,7 @@ function sprawdz(nr){
         wypiszHaslo();
     }
     else{
+        no.play();
         document.getElementById("lit" + nr).style.backgroundColor = "#330000";
         document.getElementById("lit" + nr).style.color = "#C00000";
         document.getElementById("lit" + nr).style.border = "3px solid #C00000";
