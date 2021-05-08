@@ -1,4 +1,43 @@
-var haslo = "lol";
+var tabHasla =
+["lekkoatletyka",
+"interpunkcja",
+"telekomunikacja",
+"metamorfoza",
+"zwierzchnictwo",
+"prześladowanie",
+"antyterrorysta",
+"dźwiękonaśladownictwo",
+"antykoncepcja",
+"kolorowanka",
+"konstantynopolitański",
+"lumpenproletariat",
+"luminescencja",
+"magnetoelektryczny",
+"malkontenctwo",
+"primaaprilisowy",
+"pięćdziesięciogroszówka",
+"anatomopatologiczny",
+"deoksyrybonukleinowy",
+"gżegżółka",
+"żółć",
+"wizaż",
+"chrząszcz",
+"pszenżyto",
+"Krztusiec",
+"rzeżucha",
+"rzeżączka",
+"skrzyżować",
+"spółgłoska",
+"kwas acetylosalicylowy",
+"acetylosalicylowy",
+"Prestidigitator",
+"Personifikacja",
+"Onomatopeja",
+"rozentuzjazmowany",
+"żniwiarkomłocarnia",
+"wyidealizowany"];
+
+var haslo = "";
 
 haslo = haslo.toUpperCase();
 
