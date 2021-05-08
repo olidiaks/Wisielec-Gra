@@ -37,7 +37,7 @@ var tabHasla =
 "żniwiarkomłocarnia",
 "wyidealizowany"];
 
-var haslo = "";
+var haslo = tabHasla[Math.floor(Math.random()*tabHasla.length)];
 
 haslo = haslo.toUpperCase();
 
