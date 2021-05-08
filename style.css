@@ -20,20 +20,34 @@ body{
     text-transform: uppercase;
 }
 
-#szubienica{
-float: left;
-width: 450px;
-text-align: center;
-min-height: 280px;
+#szubieniaca{
+    float: left;
+    width: 450px;
+    text-align: center;
+    min-height: 280px;
 }
 
 #alfabet{
     float: left;
     width: 450px;
     text-align: center;
-    min-height: 60px;
+    min-height: 280px;
 }
 
-#clearBoth{
-    clear: both;
+.litera{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid gray;
+    float: left;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.litera:hover{
+    background-color: #222222;
+    color: white;
+    border: 3px solid white;
 }
