@@ -1,3 +1,8 @@
+@keyframes fadein {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
 body{
     background-color: black;
     color: lightgray;
@@ -9,6 +14,7 @@ body{
     width: 900px;
     margin-left: auto;
     margin-right: auto;
+    animation: fadein 1s forwards ease-in-out;
 }
 
 #plansza{
