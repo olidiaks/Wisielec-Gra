@@ -139,6 +139,8 @@ var hasloZakodowane = "";
 
 var iloscBlendneOdpowiedzi = 0;
 
+var win = new Audio("win.wav");
+var loss = new Audio("loss.wav");
 var yes = new Audio("yes.wav");
 var no = new Audio("no.wav");
 
@@ -254,10 +256,12 @@ function sprawdz(nr){
     if(hasloZakodowane == haslo){
         document.getElementById("alfabet").innerHTML = "Tak jest! Podano prawidłowe hasło: "+ haslo +
         '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+        win.play();
     }
 
     if(iloscBlendneOdpowiedzi>=9){
         document.getElementById("alfabet").innerHTML = "Przegrana! Prawidłowe hasło: "+ haslo +
         '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+        loss.play();
     }
 }
