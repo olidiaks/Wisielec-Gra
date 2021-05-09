@@ -189,7 +189,10 @@ for(var i = 0; i< haslo.length; i++){
         hasloZakodowane += ",";
     }
     else if(haslo.charAt(i) == "."){
-        hasloZakodowane +="."
+        hasloZakodowane +=".";
+    }
+    else if(haslo.charAt(i) == "–"){
+        hasloZakodowane +="–";
     }
     else{
         hasloZakodowane += "-";
