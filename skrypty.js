@@ -258,13 +258,13 @@ function sprawdz(nr){
 
     if(hasloZakodowane == haslo){
         document.getElementById("alfabet").innerHTML = "Tak jest! Podano prawidłowe hasło: "+ haslo +
-        '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+        '.<br><br><span class="reset" onclick="location.reload()">Jeszcze raz?</span>';
         win.play();
     }
 
     if(iloscBlendneOdpowiedzi>=9){
         document.getElementById("alfabet").innerHTML = "Przegrana! Prawidłowe hasło: "+ haslo +
-        '.<br><br><span class="reset" onclick="location.reload()">Jescze raz?</span>';
+        '.<br><br><span class="reset" onclick="location.reload()">Jeszcze raz?</span>';
         loss.play();
     }
 }
